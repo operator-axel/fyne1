@@ -14,11 +14,7 @@ func main() {
 	w := a.NewWindow("TODO App")
 	w.Resize(fyne.NewSize(300, 400))
 
-	data := []models.Todo{
-		models.NewTodo("Some stuff"),
-		models.NewTodo("Some more stuff"),
-		models.NewTodo("Some other things"),
-	}
+	data := []models.Todo{}
 	todos := binding.NewUntypedList()
 	for _, t := range data {
 		todos.Append(t)
